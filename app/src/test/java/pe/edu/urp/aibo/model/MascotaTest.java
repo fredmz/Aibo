@@ -35,13 +35,13 @@ public class MascotaTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void setEdadValor0ShouldThroughtException() throws Exception {
+    public void setEdadValor0ShouldThrowException() throws Exception {
         Mascota mascota = new Mascota();
         mascota.meses(0);
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void setEdadValorNegativoShouldThroughtException() throws Exception {
+    public void setEdadValorNegativoShouldThrowException() throws Exception {
         Mascota mascota = new Mascota();
         mascota.meses(-1);
     }

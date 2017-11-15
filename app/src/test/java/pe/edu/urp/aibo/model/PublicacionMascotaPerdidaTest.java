@@ -1,6 +1,7 @@
 package pe.edu.urp.aibo.model;
 
 import org.junit.Test;
+import pe.edu.urp.aibo.model.enumeration.EstadoMascotaPerdida;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -11,7 +12,7 @@ import static org.junit.Assert.*;
 
 public class PublicacionMascotaPerdidaTest {
     @Test(expected = IllegalArgumentException.class)
-    public void setFechaMayorAhoy() throws Exception {
+    public void setFechaMayorAhoyThrowException() throws Exception {
         PublicacionMascotaPerdida publicacionMascotaPerdida = new PublicacionMascotaPerdida();
         Date manana = new Date();
         Calendar c = Calendar.getInstance();
@@ -37,5 +38,21 @@ public class PublicacionMascotaPerdidaTest {
         c.add(Calendar.DATE, -1);
         manana = c.getTime();
         publicacionMascotaPerdida.setFecha(manana);
+    }
+
+    @Test()
+    public void cerrarCasoExitosoFechaEncuentroIsComplete() throws Exception {
+        PublicacionMascotaPerdida publicacionMascotaPerdida = new PublicacionMascotaPerdida();
+        publicacionMascotaPerdida.cerrarCasoExistoso();
+
+        assertNotNull(publicacionMascotaPerdida.getFechaEncuentro());
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void cerrarCasoExitosoCerradoShouldThrowException() throws Exception {
+        PublicacionMascotaPerdida publicacionMascotaPerdida = new PublicacionMascotaPerdida();
+        publicacionMascotaPerdida.setEstado(EstadoMascotaPerdida.ENCONTRADA);
+
+        publicacionMascotaPerdida.cerrarCasoExistoso();
     }
 }

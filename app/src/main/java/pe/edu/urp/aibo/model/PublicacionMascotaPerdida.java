@@ -164,4 +164,12 @@ public class PublicacionMascotaPerdida implements Serializable {
             ", estado='" + getEstado() + "'" +
             "}";
     }
+
+    public void cerrarCasoExistoso() {
+        if (this.estado == EstadoMascotaPerdida.ENCONTRADA) {
+            throw new RuntimeException("No puede actualizar un caso cerrado");
+        }
+        this.estado = EstadoMascotaPerdida.ENCONTRADA;
+        this.fechaEncuentro = new Date();
+    }
 }
