@@ -1,6 +1,10 @@
 package pe.edu.urp.aibo.model;
 
 
+
+
+import com.orm.SugarRecord;
+
 import pe.edu.urp.aibo.model.enumeration.Sexo;
 import pe.edu.urp.aibo.model.enumeration.Tamano;
 
@@ -10,7 +14,7 @@ import java.util.Objects;
 /**
  * A Mascota.
  */
-public class Mascota implements Serializable {
+public class Mascota extends SugarRecord implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

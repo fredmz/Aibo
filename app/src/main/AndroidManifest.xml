@@ -1,21 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="pe.edu.urp.aibo.aibo">
+    package="pe.edu.urp.aibo">
 
     <application
-            android:allowBackup="true"
-            android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name"
-            android:roundIcon="@mipmap/ic_launcher_round"
-            android:supportsRtl="true"
-            android:theme="@style/AppTheme">
-        <activity android:name="pe.edu.urp.aibo.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+        android:name=".AiboApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+        <meta-data android:name="DATABASE" android:value="aibo.db" />
+        <meta-data android:name="VERSION" android:value="2" />
+        <meta-data android:name="QUERY_LOG" android:value="true" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="pe.edu.urp.aibo.model" />
+
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.MisMascotasActivity"
+            android:label="@string/title_activity_mis_mascotas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.RegistrarMascotaPerdidaActivity"
+            android:label="@string/title_activity_registrar_mascota_perdida"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.MascotasPerdidasActivity"
+            android:label="@string/title_activity_mascotas_perdidas"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -1,11 +1,13 @@
 package pe.edu.urp.aibo.model;
 
+import com.orm.SugarRecord;
+
 import java.util.Objects;
 
 /**
  * A Distrito.
  */
-public class Distrito {
+public class Distrito extends SugarRecord{
 
     private static final long serialVersionUID = 1L;
 

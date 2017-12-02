@@ -1,13 +1,15 @@
 package pe.edu.urp.aibo.model;
 
 
+import com.orm.SugarRecord;
+
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
  * A Provincia.
  */
-public class Provincia implements Serializable {
+public class Provincia extends SugarRecord implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

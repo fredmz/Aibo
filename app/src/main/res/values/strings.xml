@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Aibo</string>
+    <string name="title_activity_mis_mascotas">Mis Mascotas</string>
+    <string name="pet_name">Nombre</string>
+    <string name="title_activity_registrar_mascota_perdida">Registrar Mascota Perdida</string>
+    <string name="registrar_mascota_perdida_mascota">Mascota</string>
+    <string name="registrar_mascota_perdida_cuando_se_perdio">¿Cuando se perdió?</string>
+    <string name="registrar_mascota_perdida_registrar">Registrar</string>
+    <string name="registrar_mascota_perdida_distrito">¿En qué distrito lo perdiste?</string>
+    <string name="title_activity_mascotas_perdidas">Mascotas Perdidas</string>
 </resources>

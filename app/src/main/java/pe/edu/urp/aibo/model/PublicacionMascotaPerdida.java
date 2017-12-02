@@ -1,6 +1,8 @@
 package pe.edu.urp.aibo.model;
 
 
+import com.orm.SugarRecord;
+
 import pe.edu.urp.aibo.model.enumeration.EstadoMascotaPerdida;
 
 import java.io.Serializable;
@@ -10,7 +12,7 @@ import java.util.Objects;
 /**
  * A PublicacionMascotaPerdida.
  */
-public class PublicacionMascotaPerdida implements Serializable {
+public class PublicacionMascotaPerdida extends SugarRecord implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
