@@ -7,6 +7,25 @@
         android:layout_height="match_parent"
         android:layout_margin="@dimen/default_margin"
         tools:context="pe.edu.urp.aibo.activity.MainActivity">
+    <TextView
+        android:id="@+id/tvBienvenido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:text="@string/main_activity_bienvenido"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBienvenido"
+        app:srcCompat="@drawable/logo" />
 
     <Button
         android:id="@+id/btnMascotasPerdidas"
@@ -14,9 +33,11 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/default_margin"
         android:onClick="onClickToMascotasPerdidasActivity"
-        android:text="Mascotas perdidas"
+        android:text="@string/main_ver_mascotas_perdidas"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo"
+        />
 
     <Button
         android:id="@+id/btnMisMascotas"
@@ -24,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/default_margin"
         android:onClick="onClickToMisMascotas"
-        android:text="Mis mascotas"
+        android:text="@string/main_mis_mascotas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnMascotasPerdidas" />

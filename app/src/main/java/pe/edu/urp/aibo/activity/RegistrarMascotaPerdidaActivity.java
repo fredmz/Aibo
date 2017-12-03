@@ -131,27 +131,26 @@ public class RegistrarMascotaPerdidaActivity extends AppCompatActivity {
     }
 
     public void onClickRegistrarMascotaPerdida(View target) {
-        try {
-            if (publicacionMascotaPerdida.getFecha() == null) {
-                makeToast("Ingrese la fecha");
-                dpFecha.requestFocus();
-                return;
-            }
-            if (publicacionMascotaPerdida.getMascota() == null) {
-                makeToast("Seleccione una mascota");
-                spinMascotas.requestFocus();
-                return;
-            }
-            if (publicacionMascotaPerdida.getDistrito() == null) {
-                makeToast("Seleccione un distrito");
-                spinDistritos.requestFocus();
-                return;
-            }
-            publicacionMascotaPerdida.save();
-            startActivity(new Intent(RegistrarMascotaPerdidaActivity.this, MascotasPerdidasActivity.class));
-        } catch (Exception e) {
-            makeToast(e.getMessage());
+        if (PublicacionMascotaPerdida.count(PublicacionMascotaPerdida.class) >= 3) {
+            throw new RuntimeException("El celular se quedó sin espacio, no se pudo registrar la publicación");
         }
+        if (publicacionMascotaPerdida.getFecha() == null) {
+            makeToast("Ingrese la fecha");
+            dpFecha.requestFocus();
+            return;
+        }
+        if (publicacionMascotaPerdida.getMascota() == null) {
+            makeToast("Seleccione una mascota");
+            spinMascotas.requestFocus();
+            return;
+        }
+        if (publicacionMascotaPerdida.getDistrito() == null) {
+            makeToast("Seleccione un distrito");
+            spinDistritos.requestFocus();
+            return;
+        }
+        publicacionMascotaPerdida.save();
+        finish();
     }
 
     private void makeToast(String message) {

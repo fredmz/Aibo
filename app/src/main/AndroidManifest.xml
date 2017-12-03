@@ -10,11 +10,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <meta-data android:name="DATABASE" android:value="aibo.db" />
-        <meta-data android:name="VERSION" android:value="2" />
-        <meta-data android:name="QUERY_LOG" android:value="true" />
-        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="pe.edu.urp.aibo.model" />
+        <meta-data
+            android:name="DATABASE"
+            android:value="aibo.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="2" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="pe.edu.urp.aibo.model" />
 
         <activity android:name=".activity.MainActivity">
             <intent-filter>
@@ -34,7 +41,12 @@
         <activity
             android:name=".activity.MascotasPerdidasActivity"
             android:label="@string/title_activity_mascotas_perdidas"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.DetalleMascotaPerdidaActivity"></activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="0e50ce57451c0f22b6f690d2f7a632629fb4b47e" />
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

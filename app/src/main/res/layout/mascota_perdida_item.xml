@@ -25,22 +25,39 @@
                 android:id="@+id/tvNombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:layout_margin="@dimen/default_margin"
                 android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvEdad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:drawableLeft="@drawable/ic_cake_green_24dp"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvFecha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:layout_margin="@dimen/default_margin"
+                android:drawableLeft="@drawable/ic_date_range_blue_24dp"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvDistrito"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:layout_margin="@dimen/default_margin"
+                android:drawableLeft="@drawable/ic_location_on_rose_24dp"
                 android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnDetalles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:text="@string/mascota_perdida_item_ver_detalles"/>
         </LinearLayout>
 
     </LinearLayout>

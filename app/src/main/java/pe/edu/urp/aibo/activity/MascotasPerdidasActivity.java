@@ -7,6 +7,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.List;
@@ -30,8 +31,7 @@ public class MascotasPerdidasActivity extends AppCompatActivity {
         lvMascotasPerdidas = (ListView) findViewById(R.id.lvMascotasPerdidas);
         loadPublicaciones();
 
-        MascotasPerdidasAdapter adapter = new MascotasPerdidasAdapter(getApplicationContext(), publicaciones);
-        lvMascotasPerdidas.setAdapter(adapter);
+
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -45,9 +45,17 @@ public class MascotasPerdidasActivity extends AppCompatActivity {
 
     private void loadPublicaciones() {
         publicaciones = PublicacionMascotaPerdida.listAll(PublicacionMascotaPerdida.class);
+        MascotasPerdidasAdapter adapter = new MascotasPerdidasAdapter(getApplicationContext(), publicaciones);
+        lvMascotasPerdidas.setAdapter(adapter);
     }
 
     public void onClickToRegistrar(View view) {
         startActivity(new Intent(MascotasPerdidasActivity.this, RegistrarMascotaPerdidaActivity.class));
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadPublicaciones();
     }
 }

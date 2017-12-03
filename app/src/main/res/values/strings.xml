@@ -8,4 +8,8 @@
     <string name="registrar_mascota_perdida_registrar">Registrar</string>
     <string name="registrar_mascota_perdida_distrito">¿En qué distrito lo perdiste?</string>
     <string name="title_activity_mascotas_perdidas">Mascotas Perdidas</string>
+    <string name="main_ver_mascotas_perdidas">Ver mascotas perdidas</string>
+    <string name="main_mis_mascotas">Mis mascotas</string>
+    <string name="mascota_perdida_item_ver_detalles">Ver detalles</string>
+    <string name="main_activity_bienvenido">Bienvenido a AIBO</string>
 </resources>
