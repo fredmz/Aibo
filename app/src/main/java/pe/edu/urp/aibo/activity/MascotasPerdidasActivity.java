@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.orm.query.Select;
+
 import java.util.List;
 
 import pe.edu.urp.aibo.R;
@@ -44,7 +46,7 @@ public class MascotasPerdidasActivity extends AppCompatActivity {
     }
 
     private void loadPublicaciones() {
-        publicaciones = PublicacionMascotaPerdida.listAll(PublicacionMascotaPerdida.class);
+        publicaciones = PublicacionMascotaPerdida.listAll(PublicacionMascotaPerdida.class, "fecha desc");
         MascotasPerdidasAdapter adapter = new MascotasPerdidasAdapter(getApplicationContext(), publicaciones);
         lvMascotasPerdidas.setAdapter(adapter);
     }

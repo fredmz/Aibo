@@ -29,20 +29,20 @@ import static org.hamcrest.Matchers.allOf;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class MainActivityRegistrarMascotaPerdidaActivityTest {
+public class MainActivityToRegistrarMascotaActivityTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    public void mainActivityRegistrarMascotaPerdidaActivityTest() {
+    public void mainActivityToRegistrarMascotaActivityTest() {
         ViewInteraction appCompatButton = onView(
                 allOf(withId(R.id.btnMascotasPerdidas), withText("Ver mascotas perdidas"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
                                         0),
-                                0),
+                                2),
                         isDisplayed()));
         appCompatButton.perform(click());
 

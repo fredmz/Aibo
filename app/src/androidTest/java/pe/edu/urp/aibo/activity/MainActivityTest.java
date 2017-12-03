@@ -42,7 +42,7 @@ public class MainActivityTest {
                                 childAtPosition(
                                         withId(android.R.id.content),
                                         0),
-                                0),
+                                2),
                         isDisplayed()));
         appCompatButton.perform(click());
 
